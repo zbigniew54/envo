@@ -1,6 +1,6 @@
 
 # Envo – AI photo editor
-This is project I started in 2022 to put my **React** skills to work and play with AI. Theese are actually 2 apps. One is **Node.js** App - it renders UI with React and JavaScript, and manages database on server side. Second app is written in **Python** and it performs all the AI processing. It loads and runs Neural Network models with **Keras and Tensorflow**. It is also a simple web server with REST API for uploading images and returning AI processing results to Node.js App. Making those two apps work smoothly in production enviroment was quite a challenge :)
+This is project I started in 2022 to put my **React** skills to work and play with AI. Theese are actually 2 apps. One is **Node.js** App - it renders UI with React and JavaScript, and manages database on server side. Second app is written in **Python** and it performs all the AI processing. It loads and runs Neural Network models with **Keras and Tensorflow**. It is also a simple web server with REST API for uploading images and returning AI processing results to Node.js App. Making those two apps work smoothly in production environment was quite a challenge :)
 
 ![screen_03](https://github.com/zbigniew54/envo/assets/132487185/5ca96465-813c-41d7-8806-9dac8f53e24c)
 
