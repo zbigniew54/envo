@@ -25,7 +25,9 @@ You may select and edit each recognised part with „Layers” widget. The App l
 ![screen_04](https://github.com/zbigniew54/envo/assets/132487185/322c4078-f0e1-48b1-8062-ee7e30821289)
 
 
-The „AI” used in this app is a „u-net” type architecture with some custom modification I made. I implemented it from scratch in Python (with Keras/Tensorflow) and trained it on a dataset of 3500 images I prepared mostly myself. I took about 500 of those phograps myself. Other images come from public datasets for which I made segmentation masks. It was a lot of work but to finish it faster I used my older segmentation model that made coarse masks and I only had to manually correct its errors. 
+The „AI” used in this app is a „u-net” type architecture with some custom modifications I made. It took a me a few months of training, testing and research to make it work efficiently but I am quite satisfied with results. It has 18 milions parameters and creates 512x512 masks for face, hair and background simultaneously. Moreover each mask is 8 bit while most segmentation models output only 1 bit maks marking each pixel as either positive or negative. This creates ugly aliased edges and it can't handle fequent cases like transparent objects (ie hair). This is why I needed a custom model.
+
+I implemented it from scratch in Python (with Keras/Tensorflow) and trained it on a dataset of 3500 images I prepared mostly myself. I took about 500 of those phograps myself. Other images come from public datasets for which I made segmentation masks. It was a lot of work but to finish it faster I used my older segmentation model that made coarse masks and I only had to manually correct its errors. 
 
 ![AI generated masks example](https://github.com/zbigniew54/envo/assets/132487185/de70fe46-bf00-4339-917a-21b90dc31340)
 
