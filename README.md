@@ -4,6 +4,8 @@ This is project I started in 2022 to put my **React** skills to work and play wi
 
 ![screen_03](https://github.com/zbigniew54/envo/assets/132487185/5ca96465-813c-41d7-8806-9dac8f53e24c)
 
+_Red areas mark "background" detected by AI_
+
 # Live demo
 * https://envo.fly.dev
 * user: test15@envo.pro 
@@ -16,14 +18,14 @@ When user uploads an image it is sent to **Python App** which runs AI processing
 
 ![screen_02](https://github.com/zbigniew54/envo/assets/132487185/7b43257e-7ad2-4ee1-9e66-b8a32675acd3)
 
-_Red areas were recognised by AI as "face". You can "Face" in "Layers" widget to select this layers and apply filters only for masked pixels_
+_Red areas were recognised by AI as "face". You can click "Face" in "Layers" widget to select this layers and apply filters only for masked pixels_
 
-User may select and edit each recognised part with „Layers” widget. The App lets you edit dozens of filters for each layer. You can also see **live** preview whenever you change any filter parameter (without necessity of undoing ane previous filters modifications like in most layer based editors). This JavaScript app does it in real time even for high resolution images because it uses GPU acceleration! In fact all the rendering is done with **WebGL** and the filters are encoded as **GLSL shaders** (fragment and vertex programs).
+You may select and edit each recognised part with „Layers” widget. The App lets you edit dozens of filters for each layer. You can also see **live** preview whenever you change any filter parameter (without necessity of undoing ane previous filters modifications like in most layer based editors). This JavaScript app does it in real time even for high resolution images because it uses GPU acceleration! In fact all the rendering is done with **WebGL** and the filters are implemented as **GLSL shaders** (fragment and vertex programs).
 
 ![screen_04](https://github.com/zbigniew54/envo/assets/132487185/322c4078-f0e1-48b1-8062-ee7e30821289)
 
 
-The „AI” used in this app is a „u-net” type architecture with some custom modification I made. I implemented it from scratch in Python (with Keras/Tensorflow) and trained it on a dataset of 3500 images I prepared mostly myself (I took about 500 of those phograps myself. Other images come from public datasets for which I painted segmentation masks). 
+The „AI” used in this app is a „u-net” type architecture with some custom modification I made. I implemented it from scratch in Python (with Keras/Tensorflow) and trained it on a dataset of 3500 images I prepared mostly myself. I took about 500 of those phograps myself. Other images come from public datasets for which I made segmentation masks. It was a lot of work but to finish it faster I used my older segmentation model that made coarse masks and I only had to manually correct its errors. 
 
 ![AI generated masks example](https://github.com/zbigniew54/envo/assets/132487185/de70fe46-bf00-4339-917a-21b90dc31340)
 
@@ -42,4 +44,4 @@ _Example of masks generated for image from Celeb HQ dataset_
 
 * More filters and image effects. This app has only basic functionality right now. I plan to add more useful things like white balance adjustments, lens blur effect, noise removal etc
 
-*	Since its app designed for photographers it will support HDR images. Popular JPEGs are 8bit and it is enough for screen display. However it is not enough for photography editing. That is why all profesional cameras can save images in so called RAW format (each producer has his own name but they are mostly TIFF based). These file formats have 12-14-bit per color channel which gives a lot editing posibilities. This future is almost done and I hope to upload it soon.
+*	Since this app is designed for photographers it will support HDR images. Popular JPEGs are 8bit and it is enough for screen display. However it is not enough for photography editing. That is why all profesional cameras can save images in so called RAW format (each producer has his own format but they are mostly TIFF based). These file formats have 12-14-bit per color channel which gives a lot editing posibilities. This future is almost done and I hope to upload it soon.
