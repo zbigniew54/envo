@@ -42,9 +42,9 @@ _Example of masks generated for image from Celeb HQ dataset_
 *	**Simple image management**: uploading, deleting, rating, renaming etc
 
 # Future work:
-*	Present neural network has medium accuracy. It often makes mistakes. Especiallny person/background segmentation is a difficult topic. Right now I finish training better network for this task and I will upload It soon.
+*	Current neural network has medium accuracy. It often makes mistakes. Especiallny person/background segmentation is a difficult topic. Right now I finish training better network for this task and I will upload It soon.
 
-* While AI processing is quite fast (2-3 sec per image with any resolution) it may suffer from **„cold start”**. The Python App is not always online. After about 1 minute of inactivity it „goes sleep”. When It is woken up it must load neural network models from disk and initialize them. Iy takes up to 30 seconds. It is actually a hosting limitation. One day I may buy more expensive one to solve this issue. Anyway if you open image for edit right after it uploads you may see „AI processing” message (where „Layers” whould be). There is no live reload after AI stops processing segmentation mask at the moment so you have to go back to „Browse” and open image again to see AI-detected masks. 
+* While AI processing is quite fast (2-3 sec per image with any resolution) it may suffer from **„cold start”**. The Python App is not always online. After about 1 minute of inactivity it „goes asleep”. When It is woken up it must load neural network models from disk and initialize them. It takes up to 30 seconds. It is actually a hosting limitation. One day I may buy more expensive one to solve this issue. Anyway if you open image for edit right after it uploads you may see „AI processing” message (where „Layers” whould be). There is no live reload after AI stops processing segmentation mask at the moment so you have to go back to „Browse” and open image again to see AI-detected masks. 
 
 * More filters and image effects. This app has only basic functionality right now. I plan to add more useful things like white balance adjustments, lens blur effect, noise removal etc
 
