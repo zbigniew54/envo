@@ -20,7 +20,9 @@ When user uploads an image it is sent to **Python App** which runs AI processing
 
 _Red areas were recognised by AI as "face". You can click "Face" in "Layers" widget to select this layers and apply filters only for masked pixels_
 
-You may select and edit each recognised part with „Layers” widget. The App lets you edit dozens of filters for each layer. You can also see **live** preview whenever you change any filter parameter (without necessity of undoing ane previous filters modifications like in most layer based editors). This JavaScript app does it in real time even for high resolution images because it uses GPU acceleration! In fact all the rendering is done with **WebGL** and the filters are implemented as **GLSL shaders** (fragment and vertex programs).
+You may select and edit each recognised part with „Layers” widget. The App lets you edit dozens of filters for each layer. Every time you change any filter setttings it is **automatically saved to database**. If you make many changes during short amount of time (less than 3 seconds) only one request to server is made (with the latest filter settings). This "buffering" is done so users won't flood server with requests while rolling mouse wheel over slider or something like that.
+
+You can also see **live** preview whenever you change any filter setting (without necessity of undoing ane previous filters modifications like in most layer based editors). This JavaScript app does it in real time even for high resolution images because it uses GPU acceleration! In fact all the rendering is done with **WebGL** and the filters are implemented as **GLSL shaders** (fragment and vertex programs).
 
 ![screen_04](https://github.com/zbigniew54/envo/assets/132487185/322c4078-f0e1-48b1-8062-ee7e30821289)
 
